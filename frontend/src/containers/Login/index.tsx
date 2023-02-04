@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import { useReducerAPI } from "../../api";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
 
+const result = useReducerAPI({url: "http://localhost:8000/api/v1/login", method: "POST", } )
   return (
     <>
       <div className="flex">
