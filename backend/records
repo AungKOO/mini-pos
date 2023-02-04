@@ -1,0 +1,66 @@
+db.products.insertMany([{
+    product_name: "Air Force 1",
+    price: 150000,
+    stock: 5
+},
+{
+    product_name: "AirBook 1",
+    price: 3000,
+    stock: 2
+},{
+    product_name: "Air Pencil 1",
+    price: 1500,
+    stock: 7
+},{
+    product_name: "Air Shirt",
+    price: 800000,
+    stock: 5
+},
+{
+    product_name: "Air Bag",
+    price: 70000,
+    stock: 5
+},
+{
+    product_name: "Nomantic",
+    price: 3000000,
+    stock: 2
+},
+{
+    product_name: "shirt",
+    price: 30000,
+    stock: 5
+},
+{
+    product_name: "Slipper",
+    price: 4000,
+    stock: 7
+},
+{
+    product_name: "mp3",
+    price: 20000,
+    stock: 3
+},
+{
+    product_name: "power bank 20000mAh",
+    price: 300000,
+    stock: 8
+},
+
+]
+)
+
+db.users.insertMany([
+    {
+        username: "mgmg@email.com",
+        password: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+    },
+    {
+        username: "kyawkyaw@email.com",
+        password: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+    },
+    {
+        username: "hlahla@email.com",
+        password: "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"
+    }
+])
