@@ -11,7 +11,7 @@ const Login = () => {
         <div className="w-1/2 bg-indigo-900 h-screen"></div>
         <div className="w-1/2 bg-trueGray-50 h-screen p-20">
           <div className="flex flex-col">
-            <div className="text-cente px-4 py-2 m-2">
+            <div className="text-center px-4 py-2 m-2">
               <p className="text-left text-3xl font-semibold">Login</p>
               <p className="text-left  text-gray-500 pt-2">
                 Welcome back! Please enter your details.
