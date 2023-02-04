@@ -2,7 +2,14 @@ import React from "react";
 import Card from "../../components/Card";
 import Pill from "../../components/Pill";
 import Drawer from "../../components/drawer";
+import { useReducerAPI } from "../../api";
+
 const Home = () => {
+  const result = useReducerAPI({
+    url: "https://dummyjson.com/products/1",
+    method: "GET",
+  });
+  console.log(result);
   return (
     <div>
       <div className="flex flex-col">
@@ -10,7 +17,7 @@ const Home = () => {
           <p className="text-3xl text-left">K-Link</p>
           <Drawer></Drawer>
         </div>
-        <div className="text-center px-4 py-2 flex">
+        <div className="px-4 py-2 flex flex-grow overflow-x-auto">
           <Pill></Pill>
           <Pill></Pill>
           <Pill></Pill>
@@ -22,6 +29,9 @@ const Home = () => {
           <Pill></Pill>
           <Pill></Pill>
           <Pill></Pill>
+          <Pill></Pill>
+          <Pill></Pill>
+
           <Pill></Pill>
         </div>
         <div className="text-center bg-white-600 p-4">
