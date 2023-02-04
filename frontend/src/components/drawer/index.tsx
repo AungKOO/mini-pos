@@ -1,5 +1,6 @@
 import React from "react";
 import OrderCard from "../OrderCard";
+import Invoice from "../Invoice";
 
 const Drawer = () => {
   const [toggle, setToggle] = React.useState(false);
@@ -36,14 +37,13 @@ const Drawer = () => {
           </h5>
         </div>
         <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
-        <OrderCard />
+          <OrderCard />
+          <OrderCard />
+          <OrderCard />
+          <OrderCard />
+          <OrderCard />
         </div>
-        <div className="bg-indigo-100 flex flex-col">
-            <div>subtotal</div>
-            <div>Tax(5%)</div>
-            <div>Total</div>
-            <button>Pay Now</button>
-        </div>
+        <Invoice />
       </div>
     </>
   );
