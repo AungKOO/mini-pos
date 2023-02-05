@@ -1,25 +1,24 @@
 import React from "react";
 import OrderCard from "../OrderCard";
 import Invoice from "../Invoice";
+import { SelectedProduct } from "../../containers/Home";
 
-const Drawer = () => {
-  const [toggle, setToggle] = React.useState(false);
+type Props = {
+  toggle: boolean;
+  productList: Array<SelectedProduct>;
+  setToggle: (toggle: boolean) => void;
+  onRemoveClick: (productId: string) => void;
+};
+
+const Drawer: React.FC<Props> = ({
+  toggle,
+  productList,
+  setToggle,
+  onRemoveClick,
+}) => {
+
   return (
     <>
-      <button
-        className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg  focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mr-1.5"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight"
-        aria-controls="offcanvasRight"
-        onClick={() => {
-          setToggle(!toggle);
-          console.log(toggle);
-        }}
-      >
-        Toggle right offcanvas
-      </button>
-
       <div
         className={`offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white ${
           toggle ? `visible` : `invisible`
@@ -37,13 +36,11 @@ const Drawer = () => {
           </h5>
         </div>
         <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
-          <OrderCard />
-          <OrderCard />
-          <OrderCard />
-          <OrderCard />
-          <OrderCard />
+          {productList.map((p) => (
+            <OrderCard key={p.id} product={p} onRemoveClick={onRemoveClick} />
+          ))}
         </div>
-        <Invoice />
+        <Invoice price={productList.map((product) => product.price).reduce((a, price) => a + Number(price),0)} />
       </div>
     </>
   );

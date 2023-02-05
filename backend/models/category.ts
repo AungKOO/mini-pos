@@ -1,6 +1,6 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from 'mongoose'
 
 const categorySchema = new mongoose.Schema({
-    categoryName: String,
+  categoryName: String
 })
 export default mongoose.model('Category', categorySchema)
