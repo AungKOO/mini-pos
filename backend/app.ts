@@ -7,6 +7,7 @@ import jwt from 'jsonwebtoken'
 // routes
 import productRoute from './routes/products'
 import loginRoute from './routes/login'
+
 dotenv.config()
 const secret = process.env.SECRET || 'good try harder'
 
@@ -19,12 +20,12 @@ app.use(express.json())
 // CORS
 app.use(cors())
 
-function auth(req: Express.Request, res: Express.Response, next) {
+function auth(req: any, res: any, next: Function) {
   const authHeader = req.headers['authorization']
   if (!authHeader) return res.sendStatus(401)
   const [type, token] = authHeader.split(' ')
   if (type !== 'Bearer') return res.sendStatus(401)
-  jwt.verify(token, secret, function (err) {
+  jwt.verify(token, secret, function (err: any) {
     if (err) return res.sendStatus(401)
     else next()
   })

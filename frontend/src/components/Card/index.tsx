@@ -1,21 +1,26 @@
 import React from "react";
 
-const Card = () => {
+type ProductProps = {
+  productName: string;
+  price: number;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+};
+const Card: React.FC<ProductProps> = ({ productName, price,onClick }) => {
+  
   return (
     <>
-      <div className="rounded-lg text-left w-1/5 m-2 shadow ">
-        <a href="#!">
-          <img
-            className="rounded-lg"
-            src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
-            alt=""
-          />
-        </a>
+      <div className="rounded-lg text-left w-1/5 m-2 shadow" onClick={onClick}>
+        <img
+          className="rounded-lg"
+          src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+          alt=""
+        />
+
         <div className="text-blue-800 p-2">
-          <p className=" mb-2 text-black">
-          Couple Shoes 2021 New One Man and One Woman Spring Korean
+          <p className=" mb-2 text-black">{productName}</p>
+          <p className="font-semibold text-lg">
+            <span className="text-sm">Ks</span> {price}
           </p>
-          <p className="font-semibold text-lg"><span className="text-sm">Ks</span> 3,000</p>
         </div>
       </div>
     </>
