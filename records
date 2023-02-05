@@ -1,0 +1,90 @@
+use pos;
+db.products.insertMany([
+  {
+    productName: "Air Force 1",
+    price: 150000,
+    stock: 5,
+  },
+  {
+    productName: "AirBook 1",
+    price: 3000,
+    stock: 2,
+  },
+  {
+    productName: "Air Pencil 1",
+    price: 1500,
+    stock: 7,
+  },
+  {
+    productName: "Air Shirt",
+    price: 800000,
+    stock: 5,
+  },
+  {
+    productName: "Air Bag",
+    price: 70000,
+    stock: 5,
+  },
+  {
+    productName: "Nomantic",
+    price: 3000000,
+    stock: 2,
+  },
+  {
+    productName: "shirt",
+    price: 30000,
+    stock: 5,
+  },
+  {
+    productName: "Slipper",
+    price: 4000,
+    stock: 7,
+  },
+  {
+    productName: "mp3",
+    price: 20000,
+    stock: 3,
+  },
+  {
+    productName: "power bank 20000mAh",
+    price: 300000,
+    stock: 8,
+  },
+]);
+
+db.users.insertMany([
+  {
+    username: "mgmg@email.com",
+    password: "password",
+  },
+  {
+    username: "kyawkyaw@email.com",
+    password: "password",
+  },
+  {
+    username: "hlahla@email.com",
+    password: "password",
+  },
+]);
+
+db.users.insertMany([
+  {
+    username: "mgmg@email.com",
+    password: "password",
+  },
+  {
+    username: "kywkyw@email.com",
+    password: "password",
+  },
+]);
+
+db.categories.insertMany([
+  { categoryName: "Category 1" },
+  { categoryName: "Category 2" },
+  { categoryName: "Category 3" },
+  { categoryName: "Category 4" },
+  { categoryName: "Category 5" },
+  { categoryName: "Category 6" },
+  { categoryName: "Category 7" },
+  { categoryName: "Category 8" },
+]);
