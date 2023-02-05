@@ -69,6 +69,8 @@ router.put(
           meta: { id },
           data
         })
+      } else {
+        return res.sendStatus(500)
       }
     } catch (err) {
       console.error(err)
