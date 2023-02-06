@@ -58,21 +58,6 @@ db.users.insertMany([
     password: "password",
   },
   {
-    username: "kyawkyaw@email.com",
-    password: "password",
-  },
-  {
-    username: "hlahla@email.com",
-    password: "password",
-  },
-]);
-
-db.users.insertMany([
-  {
-    username: "mgmg@email.com",
-    password: "password",
-  },
-  {
     username: "kywkyw@email.com",
     password: "password",
   },
