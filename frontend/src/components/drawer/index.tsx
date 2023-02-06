@@ -13,7 +13,6 @@ type Props = {
 const Drawer: React.FC<Props> = ({
   toggle,
   productList,
-  setToggle,
   onRemoveClick,
 }) => {
 

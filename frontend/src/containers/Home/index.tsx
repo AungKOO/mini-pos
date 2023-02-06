@@ -18,7 +18,6 @@ export type SelectedProduct = {
 };
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  //  * product drawer logic
   const [toggle, setToggle] = React.useState(false);
   const [selectedProducts, setSelectedProducts] = React.useState<
     Array<SelectedProduct>
@@ -60,7 +59,6 @@ const Home = () => {
             toggle={toggle}
             setToggle={(toggle) => setToggle(toggle)}
             onRemoveClick={(id) => {
-              console.log(id);
               setSelectedProducts(selectedProducts.filter((i) => i.id !== id));
             }}
           />
@@ -83,7 +81,6 @@ const Home = () => {
                 price={p.price}
                 onClick={() => {
                   if (!selectedProducts.some((prd) => prd.id === p.id)) {
-                    console.log([...selectedProducts, p]);
                     setSelectedProducts([...selectedProducts, p]);
                     setToggle(true);
                   }
@@ -97,16 +94,3 @@ const Home = () => {
   );
 };
 export default Home;
-
-// const sendRequest = useCallback(async () => {
-//   if (isSending) return;
-//   setIsSending(true);
-//   const response = await API("http://localhost:8000/api/v1/login", {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Authorization": `Bearer ${token}`
-//     },
-//   });
-
-// }, [isSending]);

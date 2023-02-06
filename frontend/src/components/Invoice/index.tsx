@@ -2,9 +2,8 @@ import React from "react";
 import PayButton from "../PayButton";
 type InvoiceProps = {
   price: number;
-  onRemoveClick?: (productId: string) => void;
 };
-const Invoice: React.FC<InvoiceProps> = ({ price, onRemoveClick }) => {
+const Invoice: React.FC<InvoiceProps> = ({ price }) => {
   return (
     <>
       <div className="bg-indigo-100 flex flex-col">
@@ -31,7 +30,7 @@ const Invoice: React.FC<InvoiceProps> = ({ price, onRemoveClick }) => {
         <div className="flex flex-row">
           <div className="text-start w-1/2 ml-5 py-2 text-gray-500">Total</div>
           <div className="text-end w-1/2 mr-5 py-2 font-semibold text-blue-800">
-            Ks {price - (price * 0.05)}
+            Ks {price + price * 0.05}
           </div>
         </div>
         <div>
