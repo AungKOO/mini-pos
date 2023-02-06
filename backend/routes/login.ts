@@ -9,8 +9,6 @@ const secret = process.env.SECRET || 'good try harder'
 const router = Router()
 
 router.post('/login', async (req: any, res: any) => {
-  console.log(secret)
-
   const { username, password } = req.body
   const hashPassword = createHash('sha256').update(password).digest('hex')
   const user = await User.find({ username, password: hashPassword })
