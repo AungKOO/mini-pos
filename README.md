@@ -1,6 +1,6 @@
 # Mini Pos
 
-In this project, you can login using username and password. After login, you can select the items fetched from the backend API and order the list. You can see the caculated cost amount for the selected items.
+In this project, you can login using username and password. After login, you can select the items fetched from the backend API. You can see the caculated cost amount for the selected items.
 
 ## Features
 

@@ -22,7 +22,6 @@ const Login = () => {
           password: pwd,
         }),
       });
-      console.log(response);
       localStorage.setItem("token", response.token);
 
       setIsSending(false);
